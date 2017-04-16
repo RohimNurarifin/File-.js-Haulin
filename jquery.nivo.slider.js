@@ -372,7 +372,9 @@
 			var currentEffect = settings.effect;
 			// Generate random effect
 			if (settings.effect == 'random') {
-				var anims = new Array('sliceDownRight', 'sliceDownLeft', 'sliceUpRight', 'sliceUpLeft', 'sliceUpDown', 'sliceUpDownLeft', 'fold', 'fade', 'boxRandom', 'boxRain', 'boxRainReverse', 'boxRainGrow', 'boxRainGrowReverse');
+				$('#nivoSlider').nivoSlider({
+    				effect: 'sliceUpRight,sliceDownRight'
+				});
 				currentEffect = anims[Math.floor(Math.random() * (anims.length + 1))];
 				if (currentEffect == undefined) currentEffect = 'fade';
 			}
